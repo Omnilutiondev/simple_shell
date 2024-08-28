@@ -12,6 +12,7 @@
 #include <limits.h>
 #include <fcntl.h>
 
+#define MAX_C 10
 #define BUFSIZE 1024
 #define TOK_BUFFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
