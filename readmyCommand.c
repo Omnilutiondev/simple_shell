@@ -29,7 +29,7 @@ int readmyCommand(void)
 		}
 	}
 
-	commandz = cmdleint(buff, size);
+	commandz = cmdlineint(buff, size);
 	printf("%s", commandz);
 
 	free(buff);

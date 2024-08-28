@@ -18,6 +18,6 @@
 
 
 int readmyCommand(void);
-char *cmdleint(char *strg, int lent);
+char *cmdlineint(char *strg, int lent);
 
 #endif
