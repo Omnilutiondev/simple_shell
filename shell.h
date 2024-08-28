@@ -7,8 +7,17 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <errno.h>
+#include <signal.h>
+#include <limits.h>
+#include <fcntl.h>
+
+#define BUFSIZE 1024
+#define TOK_BUFFSIZE 128
+#define TOK_DELIM " \t\r\n\a"
+
 
 int readmyCommand(void);
-char *rmNCHARR(char *strg, int lent);
+char *cmdleint(char *strg, int lent);
 
 #endif

@@ -29,7 +29,7 @@ int readmyCommand(void)
 		}
 	}
 
-	commandz = rmNCHARR(buff, size);
+	commandz = cmdleint(buff, size);
 	printf("%s", commandz);
 
 	free(buff);

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * rmNCHARR - This is a function that removes the newline
+ * cmlineint - This is a function that removes the newline
  * character from the users input
  *
  * @strg: This is the users input
@@ -10,9 +10,9 @@
  * Return: Return the command excluding the character with a newline at the end
  */
 
-char *rmNCHARR(char *strg, int lent)
+char *cmdleint(char *strg, int lent)
 {
-	if (strg > 0 && strg[lent - 1] == '\n')
+	if (lent > 0 && strg[lent - 1] == '\n')
 		strg[lent - 1] = '\0';
 
 	return (strg);
