@@ -30,7 +30,6 @@ int readmyCommand(void)
 	}
 
 	commandz = rmNCHARR(buff, size);
-	printf("%s", commandz);
 
 	free(buff);
 	return (size);
