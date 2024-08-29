@@ -34,6 +34,11 @@ char *_strdup(const char *strdup);
 void _puts(char *strdup);
 int _putchar(char cprnt);
 
+char *_strncpy(char *deststr, char *srcstr, int ndx);
+char *_strncat(char *deststr, char *srcstr, int ndx);
+char *_strchr(char *schar, char c);
+
+
 char *cmdlineint(char *strg, int lent);
 
 #endif
