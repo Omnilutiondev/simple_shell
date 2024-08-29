@@ -56,7 +56,7 @@ int hsh(info_t *infocont, char **argvmain)
  */
 int find_builtin(info_t *infocont)
 {
-	int idmx, cmd_built = -1;
+	int idx, cmd_built = -1;
 	builtin_table builtintbl[] = {
 		{"exit", _must_exit},
 		{"env", _must_env},
@@ -69,8 +69,8 @@ int find_builtin(info_t *infocont)
 		{NULL, NULL}
 	};
 
-	for (idmx = 0; builtintbl[idmx].type; idmx++)
-		if (_strcmp(infocont->argv[0], builtintbl[idmx].type) == 0)
+	for (idx = 0; builtintbl[idx].type; idx++)
+		if (_strcmp(infocont->argv[0], builtintbl[idx].type) == 0)
 		{
 			infocont->line_count++;
 			cmd_built = builtintbl[idmx].func(infocont);
@@ -89,7 +89,7 @@ int find_builtin(info_t *infocont)
 void find_cmd(info_t *infocont)
 {
 	char *path = NULL;
-	int idmx, kinte;
+	int idx, kinte;
 
 	infocont->path = infocont->argv[0];
 	if (infocont->linecount_flag == 1)
@@ -97,8 +97,8 @@ void find_cmd(info_t *infocont)
 		infocont->line_count++;
 		infocont->linecount_flag = 0;
 	}
-	for (idmx = 0, kinte = 0; infocont->arg[idmx]; idmx++)
-		if (!is_delim(infocont->arg[idmx], " \t\n"))
+	for (idx = 0, kinte = 0; infocont->arg[idx]; idx++)
+		if (!is_delim(infocont->arg[idx], " \t\n"))
 			kinte++;
 	if (!kinte)
 		return;
