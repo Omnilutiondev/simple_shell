@@ -14,11 +14,14 @@
 
 #define MAX_C 10
 #define BUFSIZE 1024
-#define TOK_BUFFSIZE 128
-#define TOK_DELIM " \t\r\n\a"
+#define BUF_FLUSH -1
 
 
 int readmyCommand(void);
+int _strglent(char *bs);
+int _strgcmprn(char *bs1, char *bs2);
+char *begin_wit(const char *input, const char *data);
+char *_strgconcat(char *destbuf, char *srcbuf);
 char *cmdlineint(char *strg, int lent);
 
 #endif

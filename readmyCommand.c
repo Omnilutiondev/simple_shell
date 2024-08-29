@@ -11,7 +11,7 @@ int readmyCommand(void)
 
 {
 	size_t n = 0;
-	char *buff = NULL, *commandz;
+	char *buff = NULL;
 	int size;
 
 	size = getline(&buff, &n, stdin);
@@ -29,8 +29,6 @@ int readmyCommand(void)
 		}
 	}
 
-	commandz = cmdlineint(buff, size);
-	printf("%s", commandz);
 
 	free(buff);
 	return (size);
