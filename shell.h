@@ -23,11 +23,6 @@
 
 int readmyCommand(void);
 
-/* for hsh.c only */
-int hsh(info_t *infocont, char **argvmain);
-int find_builtin(info_t *infocont);
-void find_cmd(info_t *infocont);
-void fork_cmd(info_t *infocont);
 
 int _strlen(char *bs);
 int _strcmp(char *bs1, char *bs2);
