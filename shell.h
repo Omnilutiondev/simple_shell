@@ -38,6 +38,9 @@ char *_strncpy(char *deststr, char *srcstr, int ndx);
 char *_strncat(char *deststr, char *srcstr, int ndx);
 char *_strchr(char *schar, char c);
 
+char **strtow(char *str, char *g);
+char **strtow2(char *str, char g);
+
 
 char *cmdlineint(char *strg, int lent);
 
