@@ -18,10 +18,10 @@
 
 
 int readmyCommand(void);
-int _strglent(char *bs);
-int _strgcmprn(char *bs1, char *bs2);
-char *begin_wit(const char *input, const char *data);
-char *_strgconcat(char *destbuf, char *srcbuf);
+int _strlen(char *bs);
+int _strcmp(char *bs1, char *bs2);
+char *start_with(const char *input, const char *data);
+char *_strcat(char *destbuf, char *srcbuf);
 char *cmdlineint(char *strg, int lent);
 
 #endif
