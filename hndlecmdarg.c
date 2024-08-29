@@ -3,48 +3,48 @@
 /**
  * _strcpy - This function copies a string
  *
- * @destiny: This is the destination
- * @srcstr: This is the source
+ * @desti: This is the destination
+ * @src: This is the source
  *
  * Return: The ointer to destination
  */
-char *_strcpy(char *destiny, char *srcstr)
+char *_strcpy(char *desti, char *src)
 {
 	int idmx = 0;
 
-	if (destiny == srcstr || srcstr == 0)
-		return (destiny);
-	while (srcstr[idmx])
+	if (desti == src || src == 0)
+		return (desti);
+	while (src[idmx])
 	{
-		destiny[idmx] = srcstr[idmx];
+		desti[idmx] = src[idmx];
 		idmx++;
 	}
-	destiny[idmx] = 0;
-	return (destiny);
+	desti[idmx] = 0;
+	return (desti);
 }
 
 /**
  * _strdup - This function duplicates a string
  *
- * @strdup: This is the string to be duplicated
+ * @str: This is the string to be duplicated
  *
  * Return: The pointer to the duplicated string
  */
 char *_strdup(const char *str)
 {
 	int hlent = 0;
-	char *ret;
+	char *rent;
 
 	if (str == NULL)
 		return (NULL);
 	while (*str++)
 		hlent++;
-	ret = malloc(sizeof(char) * (hlent + 1));
-	if (!ret)
+	rent = malloc(sizeof(char) * (hlent + 1));
+	if (!rent)
 		return (NULL);
 	for (hlent++; hlent--;)
-		ret[hlent] = *--str;
-	return (ret);
+		rent[hlent] = *--str;
+	return (rent);
 }
 
 /**
@@ -70,22 +70,22 @@ void _puts(char *str)
 /**
  * _putchar - This function writes the character cprnt to stdout
  *
- * @cprnt: The character to print
+ * @cpt: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char cprnt)
+int _putchar(char cpt)
 {
 	static int idmx;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (cprnt == BUF_FLUSH || idmx >= WRITE_BUF_SIZE)
+	if (cpt == BUF_FLUSH || idmx >= WRITE_BUF_SIZE)
 	{
 		write(1, buf, idmx);
 		idmx = 0;
 	}
-	if (cprnt != BUF_FLUSH)
-		buf[idmx++] = cprnt;
+	if (cpt != BUF_FLUSH)
+		buf[idmx++] = cpt;
 	return (1);
 }

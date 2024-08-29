@@ -26,10 +26,10 @@ int _strcmp(char *bs1, char *bs2);
 char *starts_with(const char *input, const char *data);
 char *_strcat(char *destbuf, char *srcbuf);
 
-char *_strcpy(char *destiny, char *srcstr);
+char *_strcpy(char *desti, char *src);
 char *_strdup(const char *str);
 void _puts(char *strdup);
-int _putchar(char cprnt);
+int _putchar(char cpt);
 
 char *_strncpy(char *deststr, char *srcstr, int ndx);
 char *_strncat(char *deststr, char *srcstr, int ndx);
