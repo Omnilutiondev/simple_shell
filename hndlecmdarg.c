@@ -30,20 +30,20 @@ char *_strcpy(char *destiny, char *srcstr)
  *
  * Return: The pointer to the duplicated string
  */
-char *_strdup(const char *strdup)
+char *_strdup(const char *str)
 {
 	int hlent = 0;
 	char *ret;
 
-	if (strdup == NULL)
+	if (str == NULL)
 		return (NULL);
-	while (*strdup++)
+	while (*str++)
 		hlent++;
 	ret = malloc(sizeof(char) * (hlent + 1));
 	if (!ret)
 		return (NULL);
 	for (hlent++; hlent--;)
-		ret[hlent] = *--strdup;
+		ret[hlent] = *--str;
 	return (ret);
 }
 
@@ -54,15 +54,15 @@ char *_strdup(const char *strdup)
  *
  * Return: Nothing
  */
-void _puts(char *strdup)
+void _puts(char *str)
 {
 	int idmx = 0;
 
-	if (!strdup)
+	if (!str)
 		return;
-	while (strdup[idmx] != '\0')
+	while (str[idmx] != '\0')
 	{
-		_putchar(strdup[idmx]);
+		_putchar(str[idmx]);
 		idmx++;
 	}
 }
