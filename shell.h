@@ -27,7 +27,7 @@ char *starts_with(const char *input, const char *data);
 char *_strcat(char *destbuf, char *srcbuf);
 
 char *_strcpy(char *destiny, char *srcstr);
-char *_strdup(const char *strdup);
+char *_strdup(const char *str);
 void _puts(char *strdup);
 int _putchar(char cprnt);
 
