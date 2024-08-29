@@ -22,6 +22,7 @@
 
 
 int readmyCommand(void);
+
 /* for hsh.c only */
 int hsh(info_t *infocont, char **argvmain);
 int find_builtin(info_t *infocont);
