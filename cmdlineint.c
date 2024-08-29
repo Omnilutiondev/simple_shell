@@ -43,14 +43,14 @@ int _strcmp(char *bs1, char *bs2)
 }
 
 /**
- * start_with - This function checks if input starts with data
+ * starts_with - This function checks if input starts with data
  *
  * @input: This is the string to search
  * @data: This is the substring to find
  *
  * Return: address of next char of haystack or NULL
  */
-char *start_with(const char *input, const char *data)
+char *starts_with(const char *input, const char *data)
 {
 	while (*data)
 		if (*data++ != *input++)
