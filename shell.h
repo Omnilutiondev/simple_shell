@@ -16,12 +16,23 @@
 #define BUFSIZE 1024
 #define BUF_FLUSH -1
 
+#define READ_BUF_SIZE 1024
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
+
 
 int readmyCommand(void);
+
 int _strlen(char *bs);
 int _strcmp(char *bs1, char *bs2);
 char *start_with(const char *input, const char *data);
 char *_strcat(char *destbuf, char *srcbuf);
+
+char *_strcpy(char *destiny, char *srcstr);
+char *_strdup(const char *strdup);
+void _puts(char *strdup);
+int _putchar(char cprnt);
+
 char *cmdlineint(char *strg, int lent);
 
 #endif
